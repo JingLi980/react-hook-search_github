@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>react脚手架</title>
+    <!-- 引入图标 %PUBLIC_URL% 表示public文件夹的路径 -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- 如果想要看之前没有引入bootstrap的文件，需要把下一行注释掉，不然会对其他案例样式造成干扰 -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <!-- 解决样式丢失问题：
+        1.把 ./css/bootstrap.css 改为 /css/bootstrap.css 前面是从当前路径出发，后面是直接找到该文件
+        2.把 ./css/bootstrap.css 改为 %PUBLIC_URL%/css/bootstrap.css 后面是绝对路径
+        3.把src里的index.js的路由引入从 BowserRouter 改为 HashRouter 原因： HashRouter在刷新页面向内置服务器3000发出请求时，把#后面的所有东西在请求时自动忽略 在引入bootstrap.css时自动把#后面的忽略，按照index.html当前文件下来引入bootstrap
+     -->
+    <style>
+        .lijing {
+            background-color: orangered !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
